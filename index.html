@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="utf8" />
+    <title>知乎 - 与世界分享你的知识、经验和见解</title>
+    <style type="text/css">
+        #APP{
+            position: fixed;
+            left:1000px;
+            border: #e8e8e8 solid thin;
+            color:#3291d9;
+        }
+        #APP:hover>p{
+            display: none;
+        }
+        #APP:hover>span{
+            display: block;
+        }
+        #APP>span{
+            display: none;
+        }
+        .main{ text-align: center;}
+        .main>.logo{font-family:  'Helvetica Neue'; display: inline-block;}
+        .main>.logo>h1{
+            margin-left: 50px;
+            color: blue;
+            width: 160px;
+            height: 50px;
+            font-size: 65px;
+            font-family: 'Helvetica Neue';
+        }
+        .main>.logo>h2{
+            line-height: 1;
+            color: black;
+            font-size: 18px;
+            font-family:  'Helvetica Neue';
+            /*设置h2的粗体程度*/
+            font-weight: normal;
+            margin-top: 30px;
+            margin-right: 0px;  
+        }
+         .sign{
+            color:#3291d9;
+            font-size: 18px;
+        }
+        .sign #signup{
+            cursor: pointer;
+            margin-left: 600px;
+            float: left;
+            line-height: 30px;
+            border-bottom: thick solid #3291d9; 
+        }
+        .sign #signin{
+            cursor: pointer;
+            margin-right: 600px;
+            /*margin-bottom: 600px;*/
+            float:right;
+            line-height: 30px;
+        }
+        .message{
+            margin-left: 530px;
+            margin-top: 70px;
+            width: 300px;
+            height: 196px;
+            padding: 1px 0;
+            border-style: solid;
+            border-color: #d5d5d5;
+            border-width: 1px;
+            border-radius: 3px;
+            font-size: 14px;
+            font-family: 'Helvetica Neue';
+        }
+        input{
+            width: 300px;
+            height: 49px;
+            border-bottom:solid,1px; 
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            font-size: 100%;
+            font-family: 'Helvetica Neue';
+        }
+        #captcha_photo{
+            position: absolute;
+            top: 68%;
+            right: .5em;
+            margin-top: -19px;
+            margin-right: 530px;
+            width: 100px;
+            height: 38px;
+        }
+        .button_input>button {
+            /*光标形状*/
+            cursor: pointer;
+            margin-top: 18px;
+            margin-left: 10px;
+            font-size: 15px;
+            width: 300px;
+            background: #5bb8ff;
+            text-align: center;
+            box-shadow: none;
+            border: 0;
+            border-radius: 3px;
+            line-height: 41px;
+            color: #fff;
+        }
+        .other_signup{
+            margin-left: 425px;
+            width: 300px;
+            vertical-align: middle;
+            margin-right: 20px;
+            color: #787878;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="APP">
+        <p>下载知乎 APP</p>
+        <span class="photo">
+            <img src="http://www.weixindhw.com/file/upload/201512/20/171311603.png" />
+        </span>
+    </div>
+    <div class="main">
+        <div class="logo">
+           <h1>知乎</h1>
+           <h2>与世界分享你的知识、经验和见解</h2>
+        </div>
+        <div class="sign">
+                <p id="signup">注册</p>
+                <p id="signin">登录</p>
+        </div>
+        <div class="message">
+            <form>
+                <div class="name_input">
+                    <input type="text" name="姓名" placeholder="姓名"  />
+                    <br/>
+                </div>
+                <div class="telepone_input">
+                    <input type="text" name="手机号" placeholder="手机号（仅支持中国大陆）"/>
+                    <br/>
+                </div> 
+                <div class="password_input">
+                    <input type="password" name="密码" placeholder="密码（不少于6位）"/>
+                    <br/>    
+                </div> 
+                <div class="captcha_input">
+                    <input id="captcha" name="验证码" placeholder="验证码"/>
+                    <div id="captcha_photo">
+                        <img src="http://www.lob.cn/jq/UpFiles_58/201006/20100628233025890.jpg" width="100px";>
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+        <div class="button_input">
+              <button>注册知乎</button>
+        </div>
+        <br/>
+        <div class="other_signup">
+            <span>社交账号登录</span>
+        </div>
+    </div>
+    <!--制作这个网页的感受：第一次写的时候属于什么都不懂就是把w3school上的内容过了一遍就开始写，然后写到表单那一块就出现了各种问题，比如对齐之类的。于是决定重写，第二次写比照着知乎源代码采用了大量<div>标签把相类似的标签诸如<input>之类的包裹起来进行处理，解决了一些问题。一开始处理二维码弹出采用的是调透明度的方式但发现无法隐藏字所以又换了种方式解决。表单中的各个标签的长宽都是我一个个在浏览器中调试确定的，验证码写死了采用了absolute但是不知道是否有方法可以把图片直接绑到input上面吗？总之这次收获很多实际运用了很多标签和属性。-->
+</body>
+</html>
